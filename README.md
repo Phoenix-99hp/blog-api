@@ -4,4 +4,4 @@ It handles requests from two React front-end sites (blog-posts and blog-author).
 
 This node/Express back-end uses MongoDB as a database to store blog posts and comments. Api calls are made to the back-end from the two front-end sites to retrieve existing posts and comments. 
 
-Check out the front-end site (blog-posts) to see it in action!
+Check out the front-end site ("https://phoenix-99hp.github.io/blog-posts/") to see it in action!
