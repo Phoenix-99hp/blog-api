@@ -57,7 +57,6 @@ exports.deleteComment = (req, res, next) => {
         });
 }
 
-
 exports.deleteAllComments = (req, res, next) => {
     db.Post.findById(req.params.id)
         .exec((err, result) => {

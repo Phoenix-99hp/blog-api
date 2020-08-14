@@ -1,7 +1,6 @@
 const db = require('../models');
 
 exports.index = (req, res, next) => {
-
     db.Post.find()
         .limit(1)
         .populate("comments")
@@ -11,11 +10,9 @@ exports.index = (req, res, next) => {
             }
             res.json({ post: results })
         })
-
 }
 
 exports.next = (req, res, next) => {
-
     db.Post.find({ _id: { $gt: req.params.id } })
         .sort({ _id: 1 })
         .limit(1)
@@ -34,11 +31,9 @@ exports.next = (req, res, next) => {
                 res.json({ post: results })
             }
         })
-
 }
 
 exports.prev = (req, res, next) => {
-
     db.Post.find({ _id: { $lt: req.params.id } })
         .sort({ _id: -1 })
         .limit(1)
@@ -58,11 +53,9 @@ exports.prev = (req, res, next) => {
                 res.json({ post: results })
             }
         })
-
 }
 
 exports.newComment = (req, res, next) => {
-
     console.log(req.body);
     const adjustedText = req.body.newComment.trim();
     const adjustedName = req.body.name.trim();
