@@ -89,11 +89,7 @@ function createData(cb) {
     cb
 }
 
-// function finish() {
-//     console.log("data created");
-//     process.exit(0);
-// }
-
-// createData(finish());
-// createData(process.exit(0));
-createData(null);
+createData(setTimeout(() => {
+    console.log("data created");
+    process.exit(0);
+}, 1000));
