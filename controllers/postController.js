@@ -56,7 +56,6 @@ exports.prev = (req, res, next) => {
 }
 
 exports.newComment = (req, res, next) => {
-    console.log(req.body);
     const adjustedText = req.body.newComment.trim();
     const adjustedName = req.body.name.trim();
     console.log(adjustedText.length);
@@ -82,7 +81,6 @@ exports.newComment = (req, res, next) => {
                     if (err) {
                         console.log(err)
                     }
-                    console.log(results);
                     res.json({ updated: results });
                 })
         });

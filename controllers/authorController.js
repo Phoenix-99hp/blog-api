@@ -1,7 +1,6 @@
 const db = require('../models');
 
 exports.newPost = (req, res, next) => {
-    console.log(req.body.user);
     const adjustedTitle = req.body.title.trim();
     const adjustedText = req.body.text.trim();
     const newPost = new db.Post({ title: adjustedTitle, text: adjustedText, user: req.body.user });
@@ -38,7 +37,6 @@ exports.login = (req, res, next) => {
                 if (err) {
                     console.log(err);
                 }
-                console.log(result);
                 res.json(result)
             })
     }
