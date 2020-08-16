@@ -3,12 +3,12 @@ const authorController = require("../controllers/authorController");
 const cors = require('cors');
 
 const corsOptions = {
-    origin: "https://phoenix-99hp.github.io/blog-posts/",
+    origin: "https://phoenix-99hp.github.io/blog-posts",
     optionsSuccessStatus: 200
 }
 
 const corsOptionsAuthor = {
-    origin: "https://phoenix-99hp.github.io/blog-author/",
+    origin: "https://phoenix-99hp.github.io/blog-author",
     optionsSuccessStatus: 200
 }
 
