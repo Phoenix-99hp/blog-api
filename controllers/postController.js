@@ -60,11 +60,11 @@ exports.newComment = (req, res, next) => {
     const adjustedName = req.body.name.trim();
     console.log(adjustedText.length);
     if ((/^[a-z0-9\s@\.\-,]+$/i.test(adjustedName) === false) || (adjustedName === " ") || (adjustedName.length === 0)) {
-        res.json({ updated: null, specific: "/error/characters" });
+        res.json({ updated: null, specific: "characters" });
     }
 
     else if ((adjustedText.length > 200) || (adjustedText === " ") || (adjustedText.length === 0)) {
-        res.json({ updated: null, specific: "/error/comment" });
+        res.json({ updated: null, specific: "comment" });
     }
 
     else if ((/^[a-z0-9\s@\.\-,]+$/i.test(adjustedName) === true) && (adjustedText.length <= 200)) {
