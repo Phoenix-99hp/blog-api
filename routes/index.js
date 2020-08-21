@@ -3,7 +3,7 @@ const authorController = require("../controllers/authorController");
 const cors = require('cors');
 
 const corsOptions = {
-    origin: "https://phoenix-99hp.github.io",
+    origin: "http://localhost:3000",
     optionsSuccessStatus: 200
 }
 
